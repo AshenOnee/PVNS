@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+<body>
+<div class="form-container">
+    <form th:action="@{/getSummary}" method="get" class="form">
+
+        <div class="form-group">
+            <label for="text">Текст для составления реферата</label>
+            <textarea th:name="text" id="text" class="form-control" rows="10" placeholder="Введите текст"></textarea>
+        </div>
+
+        <div class="form-row align-items-center">
+            <div class="form-group col-sm-3 my-1">
+                <label for="select1">Алгоритм</label>
+                <select th:name="summarizertype" class="form-control" id="select1">
+                    <option>Statistic</option>
+                    <option>TextRank</option>
+                    <option>KMeans</option>
+                    <option>LSA</option>
+                </select>
+            </div>
+
+            <div class="form-group col-sm-3 my-1">
+                <label for="select2">Размер реферата</label>
+                <select th:name="compression" id="select2" class="form-control" >
+                    <option th:value="0.1">10%</option>
+                    <option th:value="0.2">20%</option>
+                    <option th:value="0.3">30%</option>
+                    <option th:value="0.4">40%</option>
+                    <option selected th:value="0.5">50%</option>
+                    <option th:value="0.6">60%</option>
+                    <option th:value="0.7">70%</option>
+                    <option th:value="0.8">80%</option>
+                    <option th:value="0.9">90%</option>
+                    <option th:value="1.0">100%</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Реферат</button>
+    </form>
+</div>
+
+</body>
+</html>

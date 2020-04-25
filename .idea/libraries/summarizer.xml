@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="summarizer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/summarizer_main.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

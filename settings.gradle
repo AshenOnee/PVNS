@@ -1,0 +1,4 @@
+rootProject.name = 'PVNS'
+include 'consumer'
+include 'producer'
+
